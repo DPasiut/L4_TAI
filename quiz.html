@@ -5,7 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
 
@@ -14,18 +16,30 @@
 </div>
 
 
+<h4 class="time">Time left: <span id="Label1"></span></h4>
+
+<div class="timeContainer">
+    <div class="timer">
+        <div id="sliderId" class="slider"></div>
+    </div>
+</div>
+
+<div class="answers" id="ansContainer">
+
+</div>
+
 <div class="container list">
-    Question: <h4 class="question"></h4>
+    Question: <span id="index"></span> <h4 class="question"></h4>
 
     Answers:
     <ul class="list-group">
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
+        <li class="list-group-item" ansNumber = 0 ></li>
+        <li class="list-group-item" ansNumber = 1 ></li>
+        <li class="list-group-item" ansNumber = 2 ></li>
+        <li class="list-group-item" ansNumber = 3 ></li>
     </ul>
 
-    <div class="buttons">
+    <div class="buttons1">
         <button class="btn btn-danger previous">Previous</button>
         <button class="btn btn-success next">Next</button>
     </div>
@@ -35,6 +49,7 @@
 <div class="container results" style="display: none">
     <div class="btn-group-custom">
         <button class="btn btn-success btn-custom restart">Retake quiz</button>
+        <button onclick="showCorrectAnswers()" class="btn btn-success btn-custom correctAnswers">Show correct answers</button>
     </div>
     <div class="score">
         <table class="table table-striped">
@@ -56,7 +71,12 @@
     </div>
 </div>
 
+<div class="container list" id="correctAns">
 
-<script src="js/script.js"></script>
+</div>
+
+
+<script src="./js/script.js"></script>
+
 </body>
 </html>
